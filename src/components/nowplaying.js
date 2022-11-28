@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPopular } from '../redux/slice/popularSlice';
+import { fetchNowplaying } from '../redux/slice/nowplayingSlice';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -8,16 +8,16 @@ import { imgUrl} from '../apiKeys';
 import axios from 'axios';
 
 
-export default function Popular() {
+export default function Nowplaying() {
 
-    const populars = useSelector((state) => state.popular);
+    const nowplayings = useSelector((state) => state.nowplaying);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchPopular());
+        dispatch(fetchNowplaying());
     }, [])
 
-    console.log(populars);
+    console.log(nowplayings);
 
     
 
@@ -32,10 +32,10 @@ export default function Popular() {
 
     return (
         <>
-        <div className='Popular'>
-            <h1>Popular</h1>
+        <div>
+            <h1>Now Playing</h1>
         <Slider {...settings}>
-            {populars.value !=0 && populars.value.results.map(e => {
+            {nowplayings.value !=0 && nowplayings.value.results.map(e => {
                 return (
                     <div>
                         <img style={{maxHeight: "200px"}} src={imgUrl + "w500" + e.backdrop_path}></img>
