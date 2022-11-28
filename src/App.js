@@ -3,6 +3,8 @@ import Header from "./components/header.js";
 import Banner from './components/banner.js';
 import Popular from "./components/popular.js";
 import Nowplaying from './components/nowplaying.js';
+import Toprated from './components/toprated';
+import Upcoming from './components/upcoming';
 function App() {
   return (
     <div className="App">
@@ -10,6 +12,8 @@ function App() {
      <Banner/>
      <Popular/>
      <Nowplaying/>
+     <Toprated/>
+     <Upcoming/>
     </div>
   );
 }
