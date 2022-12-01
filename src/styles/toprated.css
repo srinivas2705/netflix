@@ -1,0 +1,20 @@
+.Toprated{
+    width: 100%;
+    text-align: start;
+    margin: 2rem 0;
+}
+.Toprated h1{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+
+}
+.topratedimages{
+    height: 40vh;
+}
+
+.topratedinside{
+    height: 20vh;
+}
+.topratedinside:hover{
+    transform: scale(1.2);
+}

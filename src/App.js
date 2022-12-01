@@ -11,8 +11,8 @@ function App() {
      <Header/>
      <Banner/>
      <Popular/>
-     <Nowplaying/>
      <Toprated/>
+     <Nowplaying/>
      <Upcoming/>
     </div>
   );

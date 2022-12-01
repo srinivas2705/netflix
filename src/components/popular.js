@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { imgUrl} from '../apiKeys';
 import axios from 'axios';
+import "../styles/popular.css";
 
 
 export default function Popular() {
@@ -37,9 +38,11 @@ export default function Popular() {
         <Slider {...settings}>
             {populars.value !=0 && populars.value.results.map(e => {
                 return (
-                    <div>
+                    <div className='popularimages'>
+                        <div className='popularinside'>
                         <img style={{maxHeight: "200px"}} src={imgUrl + "w500" + e.backdrop_path}></img>
                         <h3>{e.title}</h3>
+                        </div>
                     </div>
                 )
             })}

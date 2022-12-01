@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { imgUrl} from '../apiKeys';
 import axios from 'axios';
-
+import "../styles/upcoming.css";
 
 export default function Upcoming() {
 
@@ -32,14 +32,16 @@ export default function Upcoming() {
 
     return (
         <>
-        <div>
+        <div className='Upcoming'>
             <h1>Upcoming</h1>
         <Slider {...settings}>
             {upcomings.value !=0 && upcomings.value.results.map(e => {
                 return (
-                    <div>
+                    <div className='upcomingimages'>
+                        <div className='upcominginside'>
                         <img style={{maxHeight: "200px"}} src={imgUrl + "w500" + e.backdrop_path}></img>
                         <h3>{e.title}</h3>
+                        </div>
                     </div>
                 )
             })}

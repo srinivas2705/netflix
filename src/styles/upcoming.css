@@ -1,0 +1,20 @@
+.Upcoming{
+    width: 100%;
+    text-align: start;
+    margin: 2rem 0;
+}
+.Upcoming h1{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+
+}
+.upcomingimages{
+    height: 40vh;
+}
+
+.upcominginside{
+    height: 20vh;
+}
+.upcominginside:hover{
+    transform: scale(1.2);
+}

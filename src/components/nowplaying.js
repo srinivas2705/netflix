@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { imgUrl} from '../apiKeys';
 import axios from 'axios';
+import "../styles/nowplaying.css";
 
 
 export default function Nowplaying() {
@@ -32,14 +33,16 @@ export default function Nowplaying() {
 
     return (
         <>
-        <div>
+        <div className='Nowplaying'>
             <h1>Now Playing</h1>
         <Slider {...settings}>
             {nowplayings.value !=0 && nowplayings.value.results.map(e => {
                 return (
-                    <div>
+                    <div className='nowplayingimages'>
+                        <div className='nowplayinginside'>
                         <img style={{maxHeight: "200px"}} src={imgUrl + "w500" + e.backdrop_path}></img>
                         <h3>{e.title}</h3>
+                        </div>
                     </div>
                 )
             })}

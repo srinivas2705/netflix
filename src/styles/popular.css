@@ -1,0 +1,21 @@
+.Popular{
+    width: 100%;
+    text-align: start;
+    margin: 2rem 0;
+}
+.Popular h1{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+
+}
+.popularimages{
+    height: 40vh;
+}
+
+.popularinside{
+    height: 20vh;
+}
+.popularinside:hover{
+    transform: scale(1.2);
+}
+

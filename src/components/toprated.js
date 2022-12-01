@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { imgUrl} from '../apiKeys';
 import axios from 'axios';
+import "../styles/toprated.css";
 
 
 export default function Toprated() {
@@ -32,14 +33,16 @@ export default function Toprated() {
 
     return (
         <>
-        <div>
+        <div className='Toprated'>
             <h1>Top Rated</h1>
         <Slider {...settings}>
             {toprateds.value !=0 && toprateds.value.results.map(e => {
                 return (
-                    <div>
+                    <div className='topratedimages'>
+                    <div className='topratedinside'>
                         <img style={{maxHeight: "200px"}} src={imgUrl + "w500" + e.backdrop_path}></img>
                         <h3>{e.title}</h3>
+                    </div>
                     </div>
                 )
             })}

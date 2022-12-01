@@ -1,0 +1,20 @@
+.Nowplaying{
+    width: 100%;
+    text-align: start;
+    margin: 2rem 0;
+}
+.Nowplaying h1{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+
+}
+.nowplayingimages{
+    height: 40vh;
+}
+
+.nowplayinginside{
+    height: 20vh;
+}
+.nowplayinginside:hover{
+    transform: scale(1.2);
+}
